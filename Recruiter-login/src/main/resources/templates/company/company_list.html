@@ -1,0 +1,52 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+ <body class='bgi'>
+		 <div th:insert="top"></div>
+		 <div class='container'>
+		 <div class="card">
+		 <div class='card-body'>
+			  <div class='dvv' th:if="${companylist.empty}">
+			      <label class='lah' style='color:green'>Sorry Company list is empty</label>
+			  </div>
+    			<div th:if="${!companylist.empty}" class='scrollit'>
+				  <table class='table'>
+					   <thead>
+						    <tr>
+							     <th class='tdr'>CompanyId</th>
+							     <th class='tdr'>Company Name</th>
+							     <th class='tdr'>Company Owner</th>
+							     <th class='tdr'>Company Website</th>
+							     <th class='tdr'>Type</th>
+							     <th class='tdr'>Establish Date</th>
+							     <th class='tdr'>No of Employee</th>							    
+							     <th class='tdr' style='color:magenta'>Action</th>
+						    </tr>
+					   </thead>
+					    <tbody>
+							 <tr th:each="companyList : ${companylist}">
+								 <td th:text="${companyList.companyid}"></td>
+					             <td th:text="${companyList.companyname}"></td>
+					             <td th:text="${companyList.ownername}"></td>
+					             <td th:text="${companyList.website}"></td>
+					             <td th:text="${companyList.type}"></td>
+					             <td th:text="${companyList.establish}"></td>
+					             <td th:text="${companyList.noofemployee}"></td>
+					             <td class="tdr">
+									 <a th:href="@{editcompany(companyid=${companyList.companyid})}">Edit</a>
+									 <a th:href="@{removecompany(companyid=${companyList.companyid})}"  onclick='return confirm("Are you sure to remove?")'>Remove</a>
+								 </td>
+							 </tr>
+						</tbody>
+				  </table> 
+			  </div> 
+			 </div> 
+		 </div>
+			<div class='dvv'>
+			     <a class='btl' href='addcompany'>Add another Company</a>
+			     <a class='btl' href='home' style='background-color:orange'>Back</a>
+			  </div>
+		 </div>
+ </body> 
+</html>

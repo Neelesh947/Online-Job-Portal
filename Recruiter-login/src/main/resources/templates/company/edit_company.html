@@ -1,0 +1,80 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:insert="top"></div>
+<body class='bgi'>
+<form action="updateCompanydetails" method="post" th:object="${companydetails}">
+<table class='tab' style='background-color:white'>
+  <tr>
+	    <td class='tatd'>Publisher Id</td>
+	   	<td class='tatd'><label class='la' th:text="${companydetails.companyid}"></label>
+		  <input type='hidden' th:field="*{companyid}"  required/>
+	  	</td>
+  </tr> 	
+	  	<tr>
+		   	<td class='tatd'>Edit Owner Name</td>
+		   	<td class='tatd'>
+	 		<input class='tbb' type='text' id='ownername' th:field="*{ownername}" required/>
+  			</td>
+  		</tr>
+		  <tr>
+		   	<td class='tatd'>Edit website</td>
+		   	<td class='tatd'>
+			  <input class='tbb' type="text" id='website' th:field="*{website}" required>
+		  	</td>
+		  </tr>
+		  <tr>
+		   	<td class='tatd'>Edit about company</td>
+		   	<td class='tatd'>
+			  <input class='tbb' type='text' id='about' th:field="*{about}" required/>
+		  	</td>
+		  </tr>
+		  
+		  <tr>
+		   	<td class='tatd'>Edit company type</td>
+		   	<td class='tatd'>
+			  <select name="type" id="type" class="tbb" th:field="*{type}" required>
+					<option value="product">Product Based</option>
+					<option value="service">Service Based</option>
+					<option value="both">Both product and service</option>
+				</select>
+		  	</td>
+		  </tr>
+		  
+		  <tr>
+		   	<td class='tatd'>Edit No of Employee</td>
+		   	<td class='tatd'>
+			  <input class='tbb' type='text' id='noofemployee' th:field="*{noofemployee}" required/>
+		  	</td>
+		  </tr>
+		  
+		  <tr>
+		   	<td class='tatd'>Edit Established date</td>
+		   	<td class='tatd'>
+			  <input class='tbb' type='date' id='establish' th:field="*{establish}" required/>
+		  	</td>
+		  </tr>
+		  
+		  <tr>
+		   	<td class='tatd'>Edit Company Mission</td>
+		   	<td class='tatd'>
+			  <input class='tbb' type='text' id='mission' th:field="*{mission}" required/>
+		  	</td>
+		  </tr>
+		  
+		  <tr>
+		   	<td class='tatd'>Edit Contact information</td>
+		   	<td class='tatd'>
+			  <input class='tbb' type='text' id='contactinformation' th:field="*{contactinformation}" required/>
+		  	</td>
+		  </tr>
+		  
+		  
+		  <tr>
+		  	<td class='tatd' colspan="2" align="center">
+		   		<button class='btr'>Update Company Details</button>
+		   		<input type='button' value='cancel' class='btr' style='background-color:orange' onclick='history.back()'>
+		    </td>
+		  </tr>
+</table>
+</form>
+</body>
+</html>

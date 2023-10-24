@@ -1,0 +1,237 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<body class='bgi'>
+<div th:insert="top"></div>
+<div class='container'>
+ <div class='card mx-auto col-md-10'>
+  <div class='card-body'>
+   <form action="save" method="post">
+     <div class='row form-group'>
+      <div class='col-md-6'>
+       	<label for="jobtitle">Enter Job Title</label><span> *</span>
+       	<input type='text' name="jobtitle" id='jobtitle' class='form-control' required/>
+      </div>
+      <div class='col-md-6'>
+      	<label for="companyname">Enter Company Name</label><span> *</span>
+       	<select name="companyname" id='companyname' class='form-control' required>
+       	 <option th:each="companyList:${companylist}" th:text="${companyList.companyname}" th:value="${companyList.companyname}"></option>
+       	</select>
+     </div>
+    </div>
+    
+    <div class='row form-group'>
+      <div class='col-md-6'>
+       	<label for="experience">Enter Required Experience</label><span> *</span>
+       	<input type='text' name="experience" id='experience' class='form-control' required/>
+      </div>
+      <div class='col-md-6'>
+      	<label for="openings">Enter Number of Openings</label><span> *</span>
+       	<input type='text' name="openings" id='openings' class='form-control' required/>
+     </div>
+    </div>
+    
+    <div class='row form-group'>
+      <div class='col-md-6'>
+	    <label for="joblocation">Select Job Location</label><span> *</span>
+	    <select name="joblocation" id="joblocation" class='form-control' required>
+	        <option value="Agartala">Agartala</option>
+	        <option value="Amaravati ">Amaravati </option>
+	        <option value="bangalore">Bangalore</option>
+	        <option value="Bhopal">Bhopal</option>
+	        <option value="Bhubaneswar ">Bhubaneswar </option>
+	        <option value="Chandigarh">Chandigarh</option>
+	        <option value="Chennai">Chennai</option>
+	        <option value="Daman">Daman</option>
+	        <option value="Dehradun">Dehradun</option>
+	        <option value="Dispur">Dispur</option>
+	        <option value="Gandhinagar">Gandhinagar</option>
+	        <option value="Gangtok">Gangtok</option>
+	        <option value="Hyderabad">Hyderabad</option>
+	        <option value="Imphal">Imphal</option>
+	        <option value="Itanagar">Itanagar</option>
+	        <option value="Jaipur">Jaipur</option>
+	        <option value="Jammu">Jammu</option>
+	        <option value="Kavaratti">Kavaratti</option>
+	        <option value="Kohima">Kohima</option>
+	        <option value="Kolkata">Kolkata</option>
+	        <option value="Lucknow">Lucknow</option>
+	        <option value="Mumbai">Mumbai</option>
+	        <option value="New Delhi">New Delhi</option>
+	        <option value="Panaji">Panaji</option>
+	        <option value="Patna">Patna</option>
+	        <option value="Puducherry">Puducherry</option>
+	        <option value="Raipur">Raipur</option>
+	        <option value="Ranchi">Ranchi</option>
+	        <option value="Shillong">Shillong</option>
+	        <option value="Shimla">Shimla</option>
+	        <option value="Silvassa">Silvassa</option>
+	        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+	    </select>
+	   </div>
+
+      <div class='col-md-6'>
+      	<label for="salaryrange">Enter Package details In Lakh</label><span> *</span>
+       	<input type='text' name="salaryrange" id='salaryrange' class='form-control' required/>
+     </div>
+    </div>
+    
+    <div class='row form-group'>
+      <div class='col-md-6'>
+       	<label for="skills">Enter Skills Required</label><span> *</span>
+       	<input type='text' name="skills" id='skills' class='form-control' required/>
+      </div>
+    </div>
+    
+     <div class='row form-group'>
+    	<div class='col-md-6'>
+	      	<label for="jobdescription">Enter Job Description</label><span> *</span>
+	       	<textarea name="jobdescription" id="jobdescription" class="form-control" rows="5" style="width:400px" required></textarea>
+	     </div>
+     </div>   
+	    
+    <div class='row form-group'>
+      <div class='col-md-6'>
+       	 <label for="industrytype">Select Industry Type</label><span> *</span>
+		    <select name="industrytype" id="industrytype" class='form-control' required>
+		        <option value="Information Technology (IT)">Information Technology (IT)</option>
+		        <option value="Finance and Banking">Finance and Banking</option>
+		        <option value="Healthcare and Medical">Healthcare and Medical</option>
+		        <option value="Automotive">Automotive</option>
+		        <option value="Aerospace and Defense">Aerospace and Defense</option>
+		        <option value="Energy (including Renewable Energy)">Energy (including Renewable Energy)</option>
+		        <option value="Telecommunications">Telecommunications</option>
+		        <option value="Retail">Retail</option>
+		        <option value="Manufacturing">Manufacturing</option>
+		        <option value="Transportation and Logistics">Transportation and Logistics</option>
+		        <option value="Real Estate">Real Estate</option>
+		        <option value="Hospitality and Tourism">Hospitality and Tourism</option>
+		        <option value="Education">Education</option>
+		        <option value="Entertainment">Entertainment</option>
+		        <option value="Environmental">Environmental</option>
+		        <option value="Food and Beverage">Food and Beverage</option>
+		        <option value="Mining">Mining</option>
+		        <option value="Oil and Gas">Oil and Gas</option>
+		        <option value="Nonprofit and Social Services">Nonprofit and Social Services</option>
+		        <option value="Biotechnology and Pharmaceuticals">Biotechnology and Pharmaceuticals</option>
+		        <option value="Wholesale and Distribution">Wholesale and Distribution</option>
+		        <option value="Legal">Legal</option>
+		    </select>
+      </div>
+      <div class='col-md-6'>
+      	 <label for="functionalarea">Select Functional Area</label><span> *</span>
+		    <select name="functionalarea" id="functionalarea" class='form-control' required>
+		        <option value="Human Resources (HR)">Human Resources (HR)</option>
+		        <option value="Finance and Accounting">Finance and Accounting</option>
+		        <option value="Marketing">Marketing</option>
+		        <option value="Sales">Sales</option>
+		        <option value="Operations and Production">Operations and Production</option>
+		        <option value="Information Technology (IT)">Information Technology (IT)</option>
+		        <option value="Customer Service">Customer Service</option>
+		        <option value="Research and Development (R&D)">Research and Development (R&D)</option>
+		        <option value="Legal and Compliance">Legal and Compliance</option>
+		        <option value="Logistics and Supply Chain Management">Logistics and Supply Chain Management</option>
+		        <option value="Public Relations (PR)">Public Relations (PR)</option>
+		        <option value="Quality Assurance and Control">Quality Assurance and Control</option>
+		        <option value="Project Management">Project Management</option>
+		        <option value="Strategy and Planning">Strategy and Planning</option>
+		        <option value="Risk Management">Risk Management</option>
+		        <option value="Facilities Management">Facilities Management</option>
+		        <option value="Environmental, Health, and Safety (EHS)">Environmental, Health, and Safety (EHS)</option>
+		        <option value="Sales and Marketing Operations">Sales and Marketing Operations</option>
+		        <option value="Corporate Communications">Corporate Communications</option>
+		        <option value="Customer Relationship Management (CRM)">Customer Relationship Management (CRM)</option>
+		    </select>
+     </div>
+    </div>
+    
+    <div class='row form-group'>
+      <div class='col-md-6'>
+       	 <label for="role">Select a Job Role</label>
+	        <select name="role" id="role" class="form-control" required>
+	            <option value="Software Developer/Engineer">Software Developer/Engineer</option>
+	            <option value="Sales Executive/Manager">Sales Executive/Manager</option>
+	            <option value="Marketing Manager/Executive">Marketing Manager/Executive</option>
+	            <option value="HR Manager/Executive">HR Manager/Executive</option>
+	            <option value="Accountant/Finance Manager">Accountant/Finance Manager</option>
+	            <option value="Customer Support/Service Executive">Customer Support/Service Executive</option>
+	            <option value="Data Analyst/Scientist">Data Analyst/Scientist</option>
+	            <option value="Operations Manager/Executive">Operations Manager/Executive</option>
+	            <option value="Content Writer/Copywriter">Content Writer/Copywriter</option>
+	            <option value="Graphic Designer/Artist">Graphic Designer/Artist</option>
+	            <option value="Teaching/Education">Teaching/Education</option>
+	            <option value="Healthcare/Pharmaceutical">Healthcare/Pharmaceutical</option>
+	            <option value="Banking/Financial Services">Banking/Financial Services</option>
+	            <option value="Telecom/IT Hardware">Telecom/IT Hardware</option>
+	            <option value="Engineering (Various Specializations)">Engineering (Various Specializations)</option>
+	            <option value="Legal/Paralegal">Legal/Paralegal</option>
+	            <option value="Hospitality/Travel and Tourism">Hospitality/Travel and Tourism</option>
+	            <option value="Media/Entertainment/Journalism">Media/Entertainment/Journalism</option>
+	            <option value="Manufacturing/Production">Manufacturing/Production</option>
+	            <option value="Retail/Store Manager">Retail/Store Manager</option>
+	            <option value="Research and Development">Research and Development</option>
+	            <option value="Consulting/Strategy">Consulting/Strategy</option>
+	            <option value="Project Management">Project Management</option>
+	            <option value="Aviation/Airlines">Aviation/Airlines</option>
+	        </select>
+      </div>
+      <div class='col-md-6'>
+      	<label for="employmenttype">Select an Employment Type</label>
+	        <select name="employmenttype" id="employementtype" class="form-control" required>
+	            <option value="Full-Time Employment">Full-Time Employment</option>
+	            <option value="Part-Time Employment">Part-Time Employment</option>
+	            <option value="Temporary Employment">Temporary Employment</option>
+	            <option value="Freelance or Independent Contractor">Freelance or Independent Contractor</option>
+	            <option value="Internship">Internship</option>
+	            <option value="Seasonal Employment">Seasonal Employment</option>
+	            <option value="Remote or Telecommuting">Remote or Telecommuting</option>
+	            <option value="Zero-Hour Contract">Zero-Hour Contract</option>
+	            <option value="Fixed-Term Employment">Fixed-Term Employment</option>
+	            <option value="Permanent Employment">Permanent Employment</option>
+	            <option value="Contract-to-Hire">Contract-to-Hire</option>
+	            <option value="On-Call Employment">On-Call Employment</option>
+	            <option value="Casual Employment">Casual Employment</option>
+	            <option value="Gig or Platform Work">Gig or Platform Work</option>
+	            <option value="Agency or Staffing Firm Employment">Agency or Staffing Firm Employment</option>
+	            <option value="Fixed-Shift Employment">Fixed-Shift Employment</option>
+	            <option value="Job-Share Employment">Job-Share Employment</option>
+	            <option value="Commission-Based Employment">Commission-Based Employment</option>
+	            <option value="Franchise or Self-Employment">Franchise or Self-Employment</option>
+	        </select>
+     </div>
+    </div>
+    
+    <div class='row form-group'>
+      <div class='col-md-6'>
+       	<label for="education">Enter Education Details</label><span> *</span>
+        	<select name="education" id="education" class="form-control" required>
+				<option value="be/btech">B.E/B.Tech</option>
+				<option value="mtech">M.Tech</option>
+				<option value="phd">P.HD</option>
+				<option value="md">Doctor of Medicine(MD)</option>
+				<option value="bed">B.ED</option>
+        	</select>	
+      </div>
+      <div class='col-md-6'>
+      	<label for="applicationdeadline">Enter Application Deadlines</label><span> *</span>
+       	<input type='date' name="applicationdeadline" id='applicationdeadline' class='form-control' required/>
+     </div>
+    </div>
+    
+    <div class='row form-group'>
+      <div class='col-md-6'>
+       	<label for="contactinformation">Enter Contact Information</label><span> *</span>
+       	<textarea type='text' name="contactinformation" id='contactinformation' class='form-control' style=width:400px;height:100px required/></textarea>
+      </div>
+     </div>
+    
+    <div class='row form-group'>
+     <div class='col-md-10'>
+       	<button class='btr'>Post Jobs</button>
+       	<input type='button' value='cancel' class='btr' style='background-color:orange' onclick='history.back()'>
+     </div>
+    </div>
+   </form>
+  </div>
+ </div>
+</div>
+</body>
+</html>

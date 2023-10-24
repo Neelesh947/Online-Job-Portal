@@ -1,0 +1,58 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+ <body class='bgi'>
+	  <div th:insert="top"></div>
+	  <div class='container'>
+		 <div class="card">
+		 <div class='card-body'>
+			 <div class='dvv' th:if="${jobList.empty}">
+			      <label class='lah' style='color:green'>Sorry Your Job Post is empty</label>
+			  </div>
+    			<div th:if="${!jobList.empty}" class='scrollit'>
+				  <table class='table'>
+					   <thead>
+						    <tr>
+							     <th class='tdr'>JobId</th>
+							     <th class='tdr'>Job Title</th>
+							     <th class='tdr'>Company</th>
+							     <th class='tdr'>Experience Required</th>
+							     <th class='tdr'>Locations</th>
+							     <th class='tdr'>Packages</th>
+							     <th class='tdr'>Skills</th>
+							     <th class='tdr'>Industry Type</th>							   
+							     <th class='tdr'>Role</th>
+							     <th class='tdr'>Education</th>
+							     <th class='tdr' style='color:magenta'>Action</th>
+						    </tr>
+					   </thead>
+					    <tbody>
+							 <tr th:each="jobPost : ${jobList}">
+								 <td th:text="${jobPost.jobid}"></td>
+					             <td th:text="${jobPost.jobtitle}"></td>
+					             <td th:text="${jobPost.companyname}"></td>
+					             <td th:text="${jobPost.experience}"></td>
+					             <td th:text="${jobPost.joblocation}"></td>
+					             <td th:text="${jobPost.salaryrange}"></td>
+					             <td th:text="${jobPost.skills}"></td>
+					             <td th:text="${jobPost.Industrytype}"></td>
+					             <td th:text="${jobPost.role}"></td>
+					             <td th:text="${jobPost.education}"></td>
+					             <td class="tdr">
+									 <a th:href="@{edit(jobid=${jobPost.jobid})}">Edit</a>
+									 <a th:href="@{remove(jobid=${jobPost.jobid})}"  onclick='return confirm("Are you sure to remove?")'>Remove</a>
+								 </td>
+							 </tr>
+						</tbody>
+				  </table> 
+			  </div> 
+			 </div> 
+		 </div>
+			<div class='dvv'>
+			     <a class='btl' href='addjob'>Post New Jobs</a>
+			     <a class='btl' href='home' style='background-color:orange'>Back</a>
+			</div>
+	  </div>	
+ </body> 
+</html>

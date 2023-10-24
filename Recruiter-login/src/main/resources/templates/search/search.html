@@ -1,0 +1,94 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:insert="top"></div>
+<body class='bgi'>
+ <table class='searchta'>
+  <tr>
+  <td>
+    <form action="search/bycompanyid">
+    <table style="width:100%">
+     <tr>
+   		<td style="width:30%" class='tatd la'>Search by companyid</td>
+   		<td style="width:50%" class='tatd'><input type='text' name='companyid' class='tbb' required></td>
+   		<td style="width:20%" class='tatd'><button class='btr'>Go</button></td>
+   	 </tr>
+    </table>
+    </form>
+   </td>
+   </tr>
+   <tr>
+   <td>
+    <form action="search/byowner">
+    <table style="width:100%">
+     <tr>
+   		<td style="width:30%" class='tatd la'>Search by company owner</td>
+   		<td style="width:50%" class='tatd'><input type='text' name='ownername' class='tbb' required></td>
+   		<td style="width:20%" class='tatd'><button class='btr'>Go</button></td>
+   	 </tr>
+    </table>
+    </form>
+   </td>
+  </tr> 
+  <tr>
+   <td>
+    <form action="search/byindustrytype">
+    <table style="width:100%">
+     <tr>
+   		<td style="width:30%" class='tatd la'>Search by Industry Type</td>
+   		<td style="width:50%" class='tatd'>
+			   <select name="industrytype" id="industrytype" class='form-control' required>
+		        <option value="Information Technology (IT)">Information Technology (IT)</option>
+		        <option value="Finance and Banking">Finance and Banking</option>
+		        <option value="Healthcare and Medical">Healthcare and Medical</option>
+		        <option value="Automotive">Automotive</option>
+		        <option value="Aerospace and Defense">Aerospace and Defense</option>
+		        <option value="Energy (including Renewable Energy)">Energy (including Renewable Energy)</option>
+		        <option value="Telecommunications">Telecommunications</option>
+		        <option value="Retail">Retail</option>
+		        <option value="Manufacturing">Manufacturing</option>
+		        <option value="Transportation and Logistics">Transportation and Logistics</option>
+		        <option value="Real Estate">Real Estate</option>
+		        <option value="Hospitality and Tourism">Hospitality and Tourism</option>
+		        <option value="Education">Education</option>
+		        <option value="Entertainment">Entertainment</option>
+		        <option value="Environmental">Environmental</option>
+		        <option value="Food and Beverage">Food and Beverage</option>
+		        <option value="Mining">Mining</option>
+		        <option value="Oil and Gas">Oil and Gas</option>
+		        <option value="Nonprofit and Social Services">Nonprofit and Social Services</option>
+		        <option value="Biotechnology and Pharmaceuticals">Biotechnology and Pharmaceuticals</option>
+		        <option value="Wholesale and Distribution">Wholesale and Distribution</option>
+		        <option value="Legal">Legal</option>
+		    </select>
+		   </td>
+   		<td style="width:20%" class='tatd'><button class='btr'>Go</button></td>
+   	 </tr>
+    </table>
+    </form>
+   </td>
+  </tr> 
+  <tr>
+   <td>
+    
+   	</td>
+   </tr>
+   <tr>
+   <td>
+    <form action="search/bycompanyname">
+    <table style="width:100%">	  
+     <tr>
+     	<td style="width:30%" class='tatd la'>Search by Company Name</td>
+     	<td style="width:50%" class='tatd'><select name="companyname" class='tbb' required>
+       	 <option th:each="companyList:${companylist}" th:text="${companyList.companyname}" th:value="${companyList.companyname}"></option>
+     	</select></td>
+     	<td style="width:20%" class='tatd'><button class='btr'>Go</button></td>
+   	  </tr>
+   	  </table>
+   	  </form>
+   	 </td>
+   	 </tr> 
+   </table>
+   <div class='dvv'>
+   <a class='btl' href='home' style='background-color:orange'>Back</a>
+   </div>   
+</body>
+</html>

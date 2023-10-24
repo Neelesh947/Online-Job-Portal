@@ -1,0 +1,81 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<body class='bgi'>
+<div th:insert="top"></div>
+<div class='container'>
+ <div class='card mx-auto col-md-10'>
+  <div class='card-body'>
+   <form action="savecompany" method="post">
+     <div class='row form-group'>
+      <div class='col-md-6'>
+       	<label for="companyname">Enter Company Name</label><span> *</span>
+       	<input type='text' name="companyname" id='companyname' class='form-control' required/>
+      </div>
+      <div class='col-md-6'>
+      	<label for="ownername">Enter Owner Name</label><span> *</span>
+       	<input type='text' name="ownername" id='ownername' class='form-control' required/>
+     </div>
+    </div>
+    
+    <div class="row form-group">
+		<div class="col-md-12">
+			<label for="website">Company Website</label><span>*</span>
+			<input type="text" name="website" id="website" class="form-control" required/>
+		</div>
+	</div>
+	
+	<div class="row form-group">
+		<div class="col-md-12">
+			<label for="about">Enter About company</label><span>*</span>
+			<input type="text" name="about" id="about" class="form-control" required/>
+		</div>
+	</div>
+	
+	
+	<div class="row form-group">
+		<div class="col-md-12">
+				<label for="type">Select company type</label><span>*</span>
+				<select name="type" id="type" class="form-control" required>
+					<option value="product">Product Based</option>
+					<option value="service">Service Based</option>
+					<option value="both">Both product and service</option>
+				</select>
+		</div>
+	</div>	
+	
+		<div class="=col-md-6">
+			<label for="noofemployee">Enter Number of employee</label>
+			<input type="text" id="noofemployee" name="noofemployee" class="form-control" required/>
+		</div>
+		
+		<div class="=col-md-6">
+			<label for="establish">Enter Established date</label>
+			<input type="date" id="establish" name="establish" class="form-control" required/>
+		</div>
+	
+	
+	 <div class="row form-group">
+		<div class="col-md-12">
+			<label for="mission">Enter Company Mission</label><span>*</span>
+			<input type="text" name="mission" id="mission" class="form-control" required/>
+		</div>
+	</div>
+    
+    <div class='row form-group'>
+      <div class='col-md-6'>
+       	<label for="contactinformation">Enter Contact Information</label><span> *</span>
+       	<textarea type='text' name="contactinformation" id='contactinformation' class='form-control' style=width:400px;height:100px required/></textarea>
+      </div>
+     </div>
+    
+    <div class='row form-group'>
+     <div class='col-md-10'>
+       	<button class='btr'>Save</button>
+       	<input type='button' value='cancel' class='btr' style='background-color:orange' onclick='history.back()'>
+     </div>
+    </div>
+   </form>
+  </div>
+ </div>
+</div>
+</body>
+</html>
