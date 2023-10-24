@@ -1,2 +1,2 @@
 # Online-Job-Portal
-I have made this for my practise or for knowledge session
+I have made this for my practise and for knowledge session
