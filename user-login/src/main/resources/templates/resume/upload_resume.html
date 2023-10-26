@@ -1,0 +1,29 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+   <script th:src="@{/JS/script.js}"> </script>
+   <link th:href='@{/CSS/style.css}' rel='stylesheet'>
+   <link th:href='@{/CSS/login.css}' rel='stylesheet'>
+</head>
+<div th:insert="top"></div>
+<body class='bgi'>
+	 <div class='container'>
+		 <div class="card">
+		 <div class='card-body'>
+			 <div align="center">
+				<form action="upload" method="post" enctype="multipart/form-data">
+				    <input type="file" name="resume" id="filename" accept=".pdf, .doc, .docx" required />
+				    <button class="btback" type="submit">Upload Resume</button>
+				</form>
+				
+				<div class='dvuser' style='padding:5px 10px 10px 10px'>
+			     <div class='dvlog' style='margin-top:1vw'>	
+			      <form action="home" >
+			        <button align="center"  class='btback' style='background-color:#008CBA'>back</button>
+			      </form>
+			     </div>
+			</div>
+		</div>
+		</div>
+	 </div>	
+</body>
+</html>

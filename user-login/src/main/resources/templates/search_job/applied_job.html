@@ -1,0 +1,67 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <head>
+   <script th:src="@{/JS/script.js}"> </script>
+   <link th:href='@{/CSS/style.css}' rel='stylesheet'>
+   <link th:href='@{/CSS/login.css}' rel='stylesheet'>
+ </head>
+	<body class='bgi'>
+	  <div th:insert="top"></div>
+	  <div class='container'>
+		 <div class="card">
+		 <div class='card-body'>
+			 <div class='dvv' th:if="${appliedjob.empty}">
+			      <label class='lah' style='color:green'>No any job Currently</label>
+			  </div>
+    			<div th:if="${!appliedjob.empty}" class='scrollit'>		
+					<table>	
+ 						<thead>
+						    <tr>
+								 <th class='tdr'>Job ID</th>
+							     <th class='tdr'>Job Title</th>
+							     <th class='tdr'>Company</th>
+							     <th class='tdr'>Experience Required</th>
+							     <th class='tdr'>Locations</th>
+							     <th class='tdr'>Packages</th>
+							     <th class='tdr'>Skills</th>
+							     <th class='tdr'>Job Description</th>							   
+							     <th class='tdr'>Role</th>
+							     <th class='tdr'>Education</th>
+							     <th class='tdr'>No Of Openings</th>
+							     <th class='tdr'>Industry Types</th>
+							     <th class='tdr'>Functional Area</th>
+							     <th class='tdr'>Employementy Type</th>							   
+							     <th class='tdr'>Application Deadlines</th>
+							     <th class='tdr'>Contact Information</th>
+						    </tr>
+					   </thead>
+					    <tbody>
+							 <tr th:each="AppliedJob : ${appliedjob}">
+								 <td th:text="${AppliedJob.jobid}"></td>
+					             <td th:text="${AppliedJob.jobtitle}"></td>
+					             <td th:text="${AppliedJob.companyname}"></td>
+					             <td th:text="${AppliedJob.experience}"></td>
+					             <td th:text="${AppliedJob.joblocation}"></td>
+					             <td th:text="${AppliedJob.salaryrange}"></td>
+					             <td th:text="${AppliedJob.skills}"></td>
+					             <td th:text="${AppliedJob.jobdescription}"></td>
+					             <td th:text="${AppliedJob.role}"></td>
+					             <td th:text="${AppliedJob.education}"></td>
+					             <td th:text="${AppliedJob.openings}"></td>
+					             <td th:text="${AppliedJob.Industrytype}"></td>
+					             <td th:text="${AppliedJob.functionalarea}"></td>
+					             <td th:text="${AppliedJob.employementtype}"></td>
+					             <td th:text="${AppliedJob.applicationdeadline}"></td>
+					             <td th:text="${AppliedJob.contactinformation}"></td>
+					             
+							 </tr>
+						</tbody>
+				  </table>
+				  </div> 
+			 </div> 
+		 </div>
+			<div class='dvv'>
+			     <a class='btl' href='home' style='background-color:orange'>Back</a>
+			</div>
+	  </div>	
+	</body>  
+</html>

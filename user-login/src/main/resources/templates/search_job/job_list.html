@@ -1,0 +1,68 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script th:src="@{/js/script.js}"></script>
+ </head>
+ <body class='bgi'>
+	<div th:insert="top"></div>
+	  <div class='container'>
+		 <div class="card">
+		 <div class='card-body'>
+			 <div class='dvv' th:if="${jobpost.empty}">
+			      <label class='lah' style='color:green'>No any job Currently</label>
+			  </div>
+    			<div th:if="${!jobpost.empty}" class='scrollit'>
+				  <table class='table'>
+					   <thead>
+						    <tr>
+							     <th class='tdr'>Job Title</th>
+							     <th class='tdr'>Company</th>
+							     <th class='tdr'>Experience Required</th>
+							     <th class='tdr'>Locations</th>
+							     <th class='tdr'>Packages</th>
+							     <th class='tdr'>Skills</th>
+							     <th class='tdr'>Job Description</th>							   
+							     <th class='tdr'>Role</th>
+							     <th class='tdr'>Education</th>
+							     <th class='tdr'>No Of Openings</th>
+							     <th class='tdr'>Industry Types</th>
+							     <th class='tdr'>Functional Area</th>
+							     <th class='tdr'>Employement Type</th>							   
+							     <th class='tdr'>Application Deadlines</th>
+							     <th class='tdr'>Contact Information</th>
+							     <th class='tdr' style='color:magenta'>Action</th>
+						    </tr>
+					   </thead>
+					    <tbody>
+							 <tr th:each="jobPost : ${jobpost}">
+					             <td th:text="${jobPost.jobtitle}"></td>
+					             <td th:text="${jobPost.companyname}"></td>
+					             <td th:text="${jobPost.experience}"></td>
+					             <td th:text="${jobPost.joblocation}"></td>
+					             <td th:text="${jobPost.salaryrange}"></td>
+					             <td th:text="${jobPost.skills}"></td>
+					             <td th:text="${jobPost.jobdescription}"></td>
+					             <td th:text="${jobPost.role}"></td>
+					             <td th:text="${jobPost.education}"></td>
+					             <td th:text="${jobPost.openings}"></td>
+					             <td th:text="${jobPost.Industrytype}"></td>
+					             <td th:text="${jobPost.functionalarea}"></td>
+					             <td th:text="${jobPost.employementtype}"></td>
+					             <td th:text="${jobPost.applicationdeadline}"></td>
+					             <td th:text="${jobPost.contactinformation}"></td>
+					             <td class="tdr">
+									<a style="cursor: pointer;color: aquamarine;" th:href="@{applyjob(jobid=${jobPost.jobid})}">Apply</a>
+								 </td>
+							 </tr>
+						</tbody>
+				  </table> 
+			  </div> 
+			 </div> 
+		 </div>
+			<div class='dvv'>
+			     <a class='btl' href='home' style='background-color:orange'>Back</a>
+			</div>
+	  </div>	
+ </body> 
+ 
+</html>
