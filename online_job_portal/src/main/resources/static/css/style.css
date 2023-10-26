@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins','sans-serif';
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background:#080808;
+    color: #fff;
+}
+
+.bgi{
+	background-image:url(image/background.jpg)
+}
+
+.btlog{
+	background-color:lightgreen;
+	color:white;
+	font-size:1.8vw;
+	width:100%;
+	border:none;
+	padding:.4vw;
+	font-weight:bold;
+	border-radius:5px;
+	cursor: pointer;
+}
+
+
+.dvv{
+	text-align: center;
+	margin-top:2vw;
+}
+
+.btlog{
+	background-color:lightgreen;
+	color:white;
+	font-size:2vw;
+	width:100%;
+	border:none;
+	padding:2vw;
+	font-weight:bold;
+	border-radius:10px;
+	cursor: pointer;
+}
+
+.dvuser{
+	padding:10px 10px 30px 10px;
+	width:40%;
+	border-radius:.4vw;
+	margin-top:10vw;
+	margin-left:9vw;
+}
+
+.dvlog{
+	text-align: left;
+	width:70%;
+	margin-top:2.7vw;
+}
+
+.dvrec{
+	padding:10px 10px 10px 20px;
+	width:40%;
+	border-radius:.4vw;
+	margin-top:-16vw;
+	margin-left:60vw;
+}
+
+.la{
+	font-size:1.5vw;
+	font-family: Arial, Helvetica, sans-serif;
+	color:Black;
+}

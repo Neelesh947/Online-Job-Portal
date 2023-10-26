@@ -1,0 +1,350 @@
+/* Reset some default styles */
+body,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body {
+	background-color: #f5f5f5;
+	font-family: "Muli", sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	width: 100%;
+        margin: 0;
+        align-content:center;
+        text-align: center;
+        
+}
+
+#wrapper{ width:1450px;
+  margin:0 auto;}
+/* Header Styles */
+header {
+    width:1450px;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	padding: 20px 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header1 {
+	width: 100%;
+        
+}
+
+.logo img {
+	margin-left: 3%;
+	width: 20%;
+	float: left;
+
+}
+
+.headernav {
+	float: left;
+	margin-left: 10%;
+	margin-top: 2.5%;
+
+}
+
+nav ul {
+	display: flex;
+	margin-right: 20px;
+}
+
+nav li {
+	margin-right: 50px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #252b60;
+	transition: color 0.3s;
+}
+
+nav a:hover {
+	color: #ff0055;
+}
+
+.login-buttons {
+	float: left;
+	margin-top: 1.5%;
+	margin-left: 2%;
+}
+
+.login-buttons button {
+	padding: 10px 20px;
+	background-color: #fff;
+	border: 1px solid #252b60;
+	color: #252b60;
+	cursor: pointer;
+	float: right;
+}
+
+.login-buttons button.selected {
+	background-color: #ff0055;
+	margin-left: 10px;
+}
+
+/* Background Image Styles */
+.container2 {
+	position: relative;
+	width: 100%;
+	margin-top: 5%;
+	align-content: center
+}
+
+.background-image {
+	height: 700px;
+	width: 100%;
+	background-image: url('../img/h1_hero.jpg');
+	background-size: cover;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.content {
+	margin-top: 4px;
+	margin-left: 10px;
+	width: 300px;
+	float: left;
+	margin-right: auto;
+}
+
+.content h1 {
+	height: auto;
+	margin-top: 10px;
+	margin-left: 140px;
+	float: left;
+	font-size: 48px;
+	color: #324087;
+	text-align: left;
+}
+
+.content2 {
+	margin-top: 5%;
+	width: 70%;
+	display: flex;
+	margin-right: 7.5%;
+	flex-direction: row;
+	justify-content: normal;
+	float: left
+}
+
+/* Style for the input element */
+.content2 input[type="text"] {
+	padding: 10px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	width: 250px;
+	margin-left: 1px;
+}
+
+.content2 h3 {
+	height: auto;
+	margin-top: 10px;
+	margin-right: 3%;
+	font-size: 18px;
+	color: #324087;
+
+}
+
+/* Style for the select element */
+.content2 select {
+	padding: 10px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	width: 200px;
+	align-content: center;
+	margin-right: 2%;
+	margin-left: 1%
+}
+
+/* Style for the button element */
+.content2 button {
+	border: 1px solid #252b60;
+	color: #252b60;
+	width: 100px;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #ff0055
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+	.logo img {
+		margin-left: 2%;
+		width: 15%;
+	}
+
+	.headernav {
+		float: none;
+		margin-left: 0;
+		margin-top: 5%;
+	}
+
+	nav ul {
+		display: flex;
+		margin-right: 10px;
+	}
+}
+
+
+.footer {
+	background-color: #252b60;
+	color: #fff;
+	padding: 30px 0;
+	width: 100%
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.footer-section {
+	width: 20%;
+	padding: 0 20px;
+
+}
+
+.footer-section hover {
+	color: #ff0055;
+}
+
+.footer-section h3 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.footer-section p {
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.footer-section ul {
+	list-style: none;
+}
+
+.footer-section ul li {
+	margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.slider {
+	height: 150px;
+	align-content: center;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	/* Keep images in a single row */
+}
+
+.slider h3 {
+	margin: 10px;
+	text-align: center;
+	animation: flash 2s linear infinite;
+}
+
+.slide {
+	display: inline-block;
+	animation: slide 20s linear infinite;
+	/* Adjust the time (20s) for slower animation */
+}
+
+.slide img {
+	width: 120px;
+	height: 50px;
+	margin: 10px;
+	margin-top: 15px;
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(100%);
+		/* Start from the right-most edge */
+		transform: translateX(100%);
+	}
+
+	100% {
+		transform: translateX(-100%);
+		/* Move to the left-most edge */
+	}
+}
+
+@keyframes flash {
+	0% {
+		color: red;
+	}
+
+	50% {
+		color: blue;
+	}
+
+	100% {
+		color: red;
+	}
+}
+
+/* Start from the right-most */
+.employee-dropdown {
+	position: relative;
+	float: right;
+	margin-top: 2%;
+	margin-right:3.5%
+}
+
+.employee-label {
+	cursor: pointer;
+	margin-top: 1%
+}
+
+.dropdown-menu {
+	width: 130px;
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #fff;
+	border: 1px solid #333;
+	border-radius: 5px;
+	list-style: none;
+	padding: 0;
+}
+
+.dropdown-menu li {
+	padding: 10px 15px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+.dropdown-menu :hover {
+    background-color: #ff0055; /* Change to red when hovered */
+}
+
+.selected-option {
+	margin-top: 10px;
+	font-weight: bold;
+}
+.dropdown-menu li a {
+        text-decoration: none; /* Remove underline */
+    }

@@ -1,0 +1,150 @@
+<html xmlns:th="http://www.thymeleaf.org">
+   <head>
+        <script th:src="@{/JS/employer.js}"> </script>
+  	    <link th:href='@{/CSS/bodybackground_1.css}' rel='stylesheet'>
+   		<link th:href='@{/CSS/login.css}' rel='stylesheet'>
+   </head>
+   <body>
+      <div class="wrapper">
+         <header>
+            <div class ="header1">
+               <div class="logo">
+                  <img src="../img/logo.png" alt="Company Logo">
+               </div>
+               <div class="headernav">
+                  <nav>
+                     <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">Find a Job</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Page</a></li>
+                        <li><a href="">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="login-buttons">
+                  <button class="selected">
+                  <a href="http://localhost:8080/naukri/user/login">Login</a>
+                  </button>
+                    <button>
+						 <a href="http://localhost:8080/naukri/user/create-account">Register</a>
+					</button>
+               </div>
+               <div class="employee-dropdown">
+				   <label class="employee-label" onclick="toggleDropdown()">For Employees</label>
+				   <ul class="dropdown-menu" id="dropdownMenu">
+				     <li onclick="handleOptionClick('login')">
+				         <a href="http://localhost:8081/recruiter/user/login">Login</a>
+				      </li>
+				      <li onclick="handleOptionClick('register')">
+				         <a href="http://localhost:8081/recruiter/user/create-account">Register</a>
+				      </li>
+				   </ul>
+				   <div class="selected-option" id="selectedOption"></div>
+				</div>
+            </header>
+            <!--header end-->   
+        
+         <div class="container2">
+            <div class="background-image" style="background-image: url('../img/h1_hero.jpg');">
+               <div class="content">
+                  <h1>
+                     <b>Empowering Dreams,</b>
+                     <b> Inspiring Futures:Your Success,</b>
+                     Our Mission
+                  </h1>
+               </div>
+               <!--contENT MESSAGE -->  
+               <div class="content2">
+                  <h3>Search Your Job Here</h3>
+                  <input type="text" placeholder="Enter job title">
+                  <select name="joblocation" id="joblocation" class='form-control' required>
+				        <option value="Agartala">Agartala</option>
+				        <option value="Amaravati ">Amaravati </option>
+				        <option value="bangalore">Bangalore</option>
+				        <option value="Bhopal">Bhopal</option>
+				        <option value="Bhubaneswar ">Bhubaneswar </option>
+				        <option value="Chandigarh">Chandigarh</option>
+				        <option value="Chennai">Chennai</option>
+				        <option value="Daman">Daman</option>
+				        <option value="Dehradun">Dehradun</option>
+				        <option value="Dispur">Dispur</option>
+				        <option value="Gandhinagar">Gandhinagar</option>
+				        <option value="Gangtok">Gangtok</option>
+				        <option value="Hyderabad">Hyderabad</option>
+				        <option value="Imphal">Imphal</option>
+				        <option value="Itanagar">Itanagar</option>
+				        <option value="Jaipur">Jaipur</option>
+				        <option value="Jammu">Jammu</option>
+				        <option value="Kavaratti">Kavaratti</option>
+				        <option value="Kohima">Kohima</option>
+				        <option value="Kolkata">Kolkata</option>
+				        <option value="Lucknow">Lucknow</option>
+				        <option value="Mumbai">Mumbai</option>
+				        <option value="New Delhi">New Delhi</option>
+				        <option value="Panaji">Panaji</option>
+				        <option value="Patna">Patna</option>
+				        <option value="Puducherry">Puducherry</option>
+				        <option value="Raipur">Raipur</option>
+				        <option value="Ranchi">Ranchi</option>
+				        <option value="Shillong">Shillong</option>
+				        <option value="Shimla">Shimla</option>
+				        <option value="Silvassa">Silvassa</option>
+				        <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+				    </select>
+                  <button>Search</button>
+               </div>
+               <!-- COntent2 div end here -->
+            </div>
+         </div>
+         <!--containter2 end-->      
+         <div class="slider">
+            <h3> Top companies hiring now</h3>
+            <div class="slide">
+               <img src='../img/slider/HCL.png' alt="HCL ">
+               <img src='../img/slider/google.png' alt="google ">
+               <img src='../img/slider/ms.png' alt="ms ">
+               <img src='../img/slider/IBM.png' alt="ibm ">
+               <img src='../img/slider/SMTbox.png' alt="SMartbox ">
+               <img src='../img/slider/c2c.png' alt="c2c ">  
+               <img src='../img/slider/HDFC.png' alt="HCL ">
+               <img src='../img/slider/kmart.png' alt="kmart ">
+               <img src='../img/slider/tcs.jfif' alt=" ">
+               <img src='../img/slider/icici.png' alt="icici ">
+               <img src='../img/slider/amazon.png' alt="amazon ">
+               <img src='../img/slider/Adobe.png' alt="adobe ">
+            </div>
+         </div>
+         <div class="footer">
+            <!%-- footer start here -->
+            <div class="footer-content">
+               <div class="footer-section">
+                  <h3>ABOUT US</h3>
+                  <p>Heaven fruitful doesn't cover lesser days appear creeping seasons so behold.</p>
+               </div>
+               <div class="footer-section">
+                  <h3>CONTACT INFO</h3>
+                  <p>Address: Your address goes here, your demo address.</p>
+                  <p>Phone: +91 9471458227</p>
+                  <p>Email: neeleshkumarm98@gmail.com</p>
+               </div>
+               <div class="footer-section">
+                  <h3>IMPORTANT LINK</h3>
+                  <ul>
+                     <li><a href="#">View Project</a></li>
+                     <li><a href="#">Contact Us</a></li>
+                     <li><a href="#">Testimonial</a></li>
+                     <li><a href="#">Properties</a></li>
+                     <li><a href="#">Support</a></li>
+                  </ul>
+               </div>
+               <div class="footer-section">
+                  <h3>NEWSLETTER</h3>
+                  <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--containter end-->  
+   </body>
+</html>
